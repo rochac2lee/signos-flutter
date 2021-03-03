@@ -1,6 +1,6 @@
-# signos
+# Característica dos Signos
 
-A new Flutter project.
+Aplicação em Flutter criada para fins de aprendizado
 
 ## Getting Started
 
