@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:signos/utils/card_signo.dart';
+import '../data/dados_signos.dart' as colecao_signos;
 
 class ListaSignos extends StatelessWidget {
+  var signos = colecao_signos.signos;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +15,10 @@ class ListaSignos extends StatelessWidget {
       body: GridView.count(
         padding: EdgeInsets.only(top: 20),
         crossAxisCount: 2,
-        children: List.generate(1, (index) => CardSigno()),
+        children: List.generate(
+          signos.length,
+          (index) => CardSigno(signos[index]),
+        ),
       ),
     );
   }
